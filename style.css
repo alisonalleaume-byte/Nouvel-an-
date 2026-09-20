@@ -1,0 +1,1319 @@
+/* =========================================================
+   LA DESCARGA
+   STYLE GLOBAL — VERSION PLUS ÉLÉGANTE ET MOINS MASSIVE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  --black: #000000;
+  --black-soft: #0b0b0b;
+  --black-card: #151515;
+
+  --cream: #f5f0e6;
+  --cream-dark: #e8decc;
+
+  --white: #ffffff;
+  --gray: #bcb6ad;
+
+  --gold: #d8ac30;
+  --gold-light: #f1cf63;
+  --gold-dark: #947026;
+
+  --radius: 26px;
+
+  --gold-glow:
+    0 0 7px rgba(216, 172, 48, .28),
+    0 0 22px rgba(216, 172, 48, .10);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.55;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   TYPOGRAPHIE GLOBALE
+========================================================= */
+
+h1,
+h2,
+h3 {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-weight: 900;
+}
+
+h1 {
+  font-size:
+    clamp(
+      2.2rem,
+      4vw,
+      4.2rem
+    );
+
+  line-height: 1;
+
+  letter-spacing: -.035em;
+}
+
+h2 {
+  font-size:
+    clamp(
+      1.8rem,
+      3vw,
+      3rem
+    );
+
+  line-height: 1.05;
+
+  letter-spacing: -.025em;
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+p {
+  color: var(--gray);
+}
+
+.gold-label {
+  color: var(--gold);
+
+  font-size: .74rem;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 78px;
+
+  z-index: 1000;
+
+  display: grid;
+
+  grid-template-columns:
+    145px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding:
+    11px
+    4vw;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      .94
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      216,
+      172,
+      48,
+      .16
+    );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: auto;
+  height: 44px;
+  object-fit: contain;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 27px;
+}
+
+.desktop-nav a {
+  color: #f5efe5;
+
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.desktop-nav a:hover {
+  color: var(--gold);
+}
+
+.header-app-button {
+  min-height: 42px;
+
+  padding:
+    0
+    18px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold)
+    );
+
+  color: #111;
+
+  font-size: .76rem;
+  font-weight: 900;
+
+  border:
+    1px solid
+    var(--gold);
+
+  box-shadow: var(--gold-glow);
+}
+
+
+/* =========================================================
+   BOUTONS
+========================================================= */
+
+.gold-button,
+.outline-button {
+  min-height: 52px;
+
+  padding:
+    0
+    24px;
+
+  border-radius: 15px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: .78rem;
+
+  font-weight: 900;
+
+  letter-spacing: .01em;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.gold-button {
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold)
+    );
+
+  color: #080808;
+
+  border:
+    1px solid
+    var(--gold);
+
+  box-shadow: var(--gold-glow);
+}
+
+.outline-button {
+  background: #111;
+
+  color: #fff;
+
+  border:
+    1px solid
+    var(--gold);
+}
+
+.gold-button:hover,
+.outline-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SECTIONS GLOBALES
+========================================================= */
+
+.section {
+  padding:
+    78px
+    5vw;
+}
+
+.section-title {
+  max-width: 1100px;
+
+  margin:
+    0
+    auto
+    38px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+.section-title span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold)
+    );
+}
+
+.section-title span:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      var(--gold)
+    );
+}
+
+.section-title h2 {
+  font-size:
+    clamp(
+      1.05rem,
+      2vw,
+      1.55rem
+    );
+
+  letter-spacing: .01em;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACCUEIL
+========================================================= */
+
+.home-hero {
+  min-height: 100vh;
+
+  padding:
+    118px
+    5vw
+    80px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(
+        216,
+        172,
+        48,
+        .05
+      ),
+      transparent 45%
+    ),
+    #000;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1320px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.hero-logo {
+  width:
+    min(
+      420px,
+      74vw
+    );
+
+  margin:
+    0
+    auto;
+}
+
+.hero-location {
+  margin-top: 5px;
+  margin-bottom: 30px;
+
+  color: var(--gold);
+
+  font-size: .75rem;
+  font-weight: 800;
+
+  letter-spacing: .18em;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 1120px;
+
+  aspect-ratio: 16 / 9;
+
+  margin: auto;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  border:
+    1.5px solid
+    rgba(
+      216,
+      172,
+      48,
+      .44
+    );
+
+  box-shadow: var(--gold-glow);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #181818,
+      #080808
+    );
+
+  color: var(--gold);
+
+  font-size: .74rem;
+  font-weight: 900;
+}
+
+.hero-text {
+  margin-top: 38px;
+}
+
+.hero-text h1 {
+  font-size:
+    clamp(
+      2.3rem,
+      4.8vw,
+      4.4rem
+    );
+}
+
+.hero-text p {
+  margin-top: 14px;
+
+  font-size: 1.05rem;
+
+  color: #ded8ce;
+}
+
+.hero-actions {
+  max-width: 900px;
+
+  margin:
+    36px
+    auto
+    0;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 18px;
+}
+
+.big-action-card {
+  min-height: 130px;
+
+  padding:
+    24px
+    30px;
+
+  border-radius: 24px;
+
+  border:
+    2px solid
+    var(--gold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf7f0,
+      #eee4d4
+    );
+
+  color: #111;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+
+  box-shadow: var(--gold-glow);
+
+  transition:
+    transform .25s ease;
+}
+
+.big-action-card:hover {
+  transform: translateY(-4px);
+}
+
+.big-action-card small {
+  display: block;
+
+  font-size: .74rem;
+  font-weight: 900;
+}
+
+.big-action-card strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 1.65rem;
+  line-height: 1;
+
+  font-weight: 950;
+}
+
+.big-action-card > span {
+  color: var(--gold);
+  font-size: 2.2rem;
+}
+
+
+/* =========================================================
+   COURS ACCUEIL
+========================================================= */
+
+.courses-intro {
+  max-width: 720px;
+
+  margin:
+    0
+    auto
+    38px;
+
+  text-align: center;
+}
+
+.courses-intro h3 {
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      2.4rem
+    );
+}
+
+.courses-intro p {
+  margin-top: 13px;
+
+  font-size: .98rem;
+}
+
+.courses-grid {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      1fr
+    );
+
+  gap: 14px;
+}
+
+.course-card {
+  min-height: 235px;
+
+  padding: 22px;
+
+  border-radius: 24px;
+
+  border:
+    1.5px solid
+    var(--gold);
+
+  box-shadow: var(--gold-glow);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.course-card.light {
+  background:
+    linear-gradient(
+      145deg,
+      #faf7ef,
+      #ede3d2
+    );
+
+  color: #111;
+}
+
+.course-card.dark {
+  background:
+    linear-gradient(
+      145deg,
+      #181818,
+      #090909
+    );
+
+  color: #fff;
+}
+
+.course-card.light p {
+  color: #665f57;
+}
+
+.course-card.dark p {
+  color: #bfb9b0;
+}
+
+.course-icon {
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #111;
+
+  color: var(--gold);
+
+  border:
+    1px solid
+    var(--gold);
+
+  font-size: .95rem;
+  font-weight: 950;
+}
+
+.course-card h3 {
+  font-size: 1.25rem;
+}
+
+.course-card p {
+  margin-top: 10px;
+
+  font-size: .86rem;
+}
+
+.course-card > span {
+  margin-top: 17px;
+
+  color: var(--gold);
+
+  font-size: .68rem;
+  font-weight: 950;
+}
+
+.planning-cta {
+  max-width: 1120px;
+
+  margin:
+    38px
+    auto
+    0;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  border:
+    1.5px solid
+    var(--gold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #171717,
+      #080808
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  box-shadow: var(--gold-glow);
+}
+
+.planning-cta h3 {
+  margin-top: 7px;
+
+  font-size: 1.55rem;
+}
+
+.planning-cta p:not(.gold-label) {
+  margin-top: 9px;
+
+  max-width: 620px;
+
+  font-size: .92rem;
+}
+
+
+/* =========================================================
+   CARTE PREMIÈRE VISITE
+========================================================= */
+
+.first-visit {
+  padding-top: 0;
+}
+
+.first-visit-card {
+  max-width: 1120px;
+
+  margin: auto;
+
+  padding: 36px;
+
+  border-radius: 25px;
+
+  border:
+    2px solid
+    var(--gold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf7ef,
+      #ede3d2
+    );
+
+  color: #111;
+
+  box-shadow: var(--gold-glow);
+}
+
+.first-visit-card h2 {
+  margin-top: 7px;
+
+  color: #111;
+
+  font-size:
+    clamp(
+      1.8rem,
+      3vw,
+      2.6rem
+    );
+}
+
+.first-visit-card p:not(.gold-label) {
+  max-width: 760px;
+
+  margin-top: 15px;
+
+  color: #625d55;
+
+  font-size: .96rem;
+}
+
+.large-gradient-button {
+  width: 100%;
+  min-height: 62px;
+
+  margin-top: 25px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #846631,
+      #c39b45
+    );
+
+  color: #fff;
+
+  font-size: .8rem;
+
+  font-weight: 950;
+}
+
+
+/* =========================================================
+   DÉCOUVRIR LA DESCARGA — STYLE PREMIUM LUDIQUE
+========================================================= */
+
+.discover-comic {
+    width: 100%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding:
+        54px
+        0;
+
+    background:
+        transparent;
+}
+
+
+/* =========================================================
+   TITRE
+========================================================= */
+
+.discover-comic-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.discover-comic-heading h2 {
+    margin-top: 7px;
+
+    color: #fff;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.2rem
+        );
+
+    line-height: 1;
+
+    letter-spacing: -.035em;
+}
+
+
+.discover-comic-heading > div:first-child > p:last-child {
+    max-width: 600px;
+
+    margin-top: 12px;
+
+    color:
+        rgba(255,255,255,.60);
+
+    font-size: .92rem;
+
+    line-height: 1.55;
+}
+
+
+.discover-handwritten {
+    color: #bd7c3b;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    font-weight: 800;
+
+    line-height: 1.18;
+
+    text-align: center;
+
+    transform:
+        rotate(-7deg);
+}
+
+
+/* =========================================================
+   GRILLE
+========================================================= */
+
+.discover-comic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARTE
+========================================================= */
+
+.discover-comic-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding:
+        26px
+        66px
+        25px
+        86px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 25px;
+
+    color: #20150c;
+
+    text-decoration: none;
+
+    border:
+        1px solid rgba(130,77,28,.22);
+
+    box-shadow:
+        0 13px 30px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.32);
+
+    overflow: visible;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.discover-comic-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 38px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   COULEURS
+========================================================= */
+
+.discover-comic-card.champagne {
+    background:
+        linear-gradient(
+            145deg,
+            #f7e7c6 0%,
+            #e3b575 58%,
+            #c78a49 100%
+        );
+}
+
+
+.discover-comic-card.ivoire {
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf1 0%,
+            #f1dfbd 60%,
+            #e5c18e 100%
+        );
+}
+
+
+.discover-comic-card.bronze {
+    background:
+        linear-gradient(
+            145deg,
+            #e9c38e 0%,
+            #c88446 55%,
+            #9b5728 100%
+        );
+}
+
+
+.discover-comic-card.champagne-light {
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf0 0%,
+            #f6e5c5 58%,
+            #dca963 100%
+        );
+}
+
+
+/* =========================================================
+   NUMÉRO
+========================================================= */
+
+.discover-comic-number {
+    position: absolute;
+
+    top: -11px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff5df,
+            #d49a50
+        );
+
+    color: #6c3e19;
+
+    border:
+        1px solid rgba(111,62,23,.28);
+
+    font-size: .67rem;
+
+    font-weight: 950;
+
+    box-shadow:
+        0 6px 15px rgba(70,40,16,.15);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ICÔNE
+========================================================= */
+
+.discover-comic-icon {
+    position: absolute;
+
+    left: 21px;
+
+    top: 50%;
+
+    width: 50px;
+    height: 50px;
+
+    transform:
+        translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.42);
+
+    border:
+        1px solid rgba(112,65,24,.20);
+
+    color: #82501f;
+
+    font-size: 1.45rem;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+
+/* =========================================================
+   TEXTE
+========================================================= */
+
+.discover-comic-content {
+    min-width: 0;
+}
+
+
+.discover-comic-content small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        #875526;
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    letter-spacing: .06em;
+}
+
+
+.discover-comic-card.bronze
+.discover-comic-content small {
+    color:
+        #6a3717;
+}
+
+
+.discover-comic-content h3 {
+    margin: 0;
+
+    color: #1e140c;
+
+    font-size: 1.27rem;
+
+    line-height: 1.1;
+}
+
+
+.discover-comic-content p {
+    max-width: 360px;
+
+    margin-top: 7px;
+
+    color:
+        rgba(38,25,15,.68);
+
+    font-size: .82rem;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   FLÈCHE
+========================================================= */
+
+.discover-comic-arrow {
+    position: absolute;
+
+    right: 20px;
+
+    top: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    transform:
+        translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.32);
+
+    border:
+        1px solid rgba(104,61,24,.18);
+
+    color: #71421d;
+
+    font-size: 1.45rem;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PETITES TOUCHES BD
+========================================================= */
+
+.discover-comic-card:nth-child(1) {
+    transform:
+        rotate(-.4deg);
+}
+
+
+.discover-comic-card:nth-child(2) {
+    transform:
+        rotate(.45deg);
+}
+
+
+.discover-comic-card:nth-child(3) {
+    transform:
+        rotate(.3deg);
+}
+
+
+.discover-comic-card:nth-child(4) {
+    transform:
+        rotate(-.35deg);
+}
+
+
+.discover-comic-card:nth-child(1)::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    color: rgba(125,73,28,.55);
+
+    font-size: .8rem;
+}
+
+
+.discover-comic-card:nth-child(2)::after {
+    content: "〰";
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    color: rgba(133,77,29,.55);
+
+    font-size: 1rem;
+}
+
+
+.discover-comic-card:nth-child(3)::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    color: rgba(255,240,210,.7);
+
+    font-size: .8rem;
+}
+
+
+.discover-comic-card:nth-child(4)::after {
+    content: "♡";
+
+    position: absolute;
+
+    top: 13px;
+    right: 18px;
+
+    color: rgba(125,73,28,.55);
+
+    font-size: .9rem;
+}
